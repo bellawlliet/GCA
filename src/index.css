@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-coral: #ff3366;
+
+  --font-display: 'Manrope', 'Inter', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  --animate-vibrate: vibrate 0.24s linear infinite;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-blob: blob-float 14s ease-in-out infinite;
+}
+
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: scale(1.05) translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.05) translate(-1.5px, 1px) rotate(-1deg);
+  }
+  40% {
+    transform: scale(1.05) translate(1.5px, -1px) rotate(1deg);
+  }
+  60% {
+    transform: scale(1.05) translate(-1px, -1px) rotate(-0.5deg);
+  }
+  80% {
+    transform: scale(1.05) translate(1px, 1px) rotate(0.5deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, 5%) scale(1.08);
+  }
+  66% {
+    transform: translate(-4%, -3%) scale(0.95);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #4f46e5;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
