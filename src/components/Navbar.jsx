@@ -42,7 +42,7 @@ function Navbar({ onVoteClick }) {
           </span>
         ) : (
           <img
-            src="/gca-logo.png"
+            src={`${import.meta.env.BASE_URL}gca-logo.png`}
             alt="GCA Logo"
             className="h-10 w-auto"
             onError={() => setLogoFailed(true)}

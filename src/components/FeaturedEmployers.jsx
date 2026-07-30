@@ -1,14 +1,16 @@
 import { useState } from 'react'
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const EMPLOYERS = [
-  { name: 'Maybank', logo: '/logos/maybank.png', bg: '#FFC72C', text: '#000000' },
-  { name: 'Petronas', logo: '/logos/petronas.png', bg: '#00543C', text: '#FFFFFF' },
-  { name: 'PwC', logo: '/logos/pwc.png', bg: '#F26522', text: '#FFFFFF' },
-  { name: 'Maxis', logo: '/logos/maxis.jpg', bg: '#00A651', text: '#FFFFFF' },
-  { name: 'Intel', logo: '/logos/intel.png', bg: '#0071C5', text: '#FFFFFF' },
-  { name: 'CIMB', logo: '/logos/cimb.png', bg: '#E4002B', text: '#FFFFFF' },
-  { name: 'Shell', logo: '/logos/shell.png', bg: '#DD1D21', text: '#FFD500' },
-  { name: 'EY', logo: '/logos/ey.png', bg: '#FFE600', text: '#2E2E38' },
+  { name: 'Maybank', logo: `${BASE_URL}logos/maybank.png`, bg: '#FFC72C', text: '#000000' },
+  { name: 'Petronas', logo: `${BASE_URL}logos/petronas.png`, bg: '#00543C', text: '#FFFFFF' },
+  { name: 'PwC', logo: `${BASE_URL}logos/pwc.png`, bg: '#F26522', text: '#FFFFFF' },
+  { name: 'Maxis', logo: `${BASE_URL}logos/maxis.jpg`, bg: '#00A651', text: '#FFFFFF' },
+  { name: 'Intel', logo: `${BASE_URL}logos/intel.png`, bg: '#0071C5', text: '#FFFFFF' },
+  { name: 'CIMB', logo: `${BASE_URL}logos/cimb.png`, bg: '#E4002B', text: '#FFFFFF' },
+  { name: 'Shell', logo: `${BASE_URL}logos/shell.png`, bg: '#DD1D21', text: '#FFD500' },
+  { name: 'EY', logo: `${BASE_URL}logos/ey.png`, bg: '#FFE600', text: '#2E2E38' },
 ]
 
 function BrandBadge({ name, bg, text }) {

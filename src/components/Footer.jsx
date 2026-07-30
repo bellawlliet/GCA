@@ -48,7 +48,11 @@ function Footer() {
     <footer className="border-t border-slate-200 bg-white/70 px-6 py-12 backdrop-blur-md lg:px-10">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:justify-between">
         <div className="max-w-sm">
-          <img src="/gca-badge.png" alt="GCA Award Badge" className="w-48 h-auto" />
+          <img
+            src={`${import.meta.env.BASE_URL}gca-badge.png`}
+            alt="GCA Award Badge"
+            className="w-48 h-auto"
+          />
           <p className="mt-3 text-sm text-slate-500">
             Malaysia&rsquo;s largest student-voted employer award — recognizing
             companies that create meaningful careers.

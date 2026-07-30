@@ -274,7 +274,7 @@ function ForEmployers() {
             document.
           </p>
           <a
-            href="/GCA-Employer-Info-Kit.pdf"
+            href={`${import.meta.env.BASE_URL}GCA-Employer-Info-Kit.pdf`}
             download="GCA-Employer-Info-Kit.pdf"
             className="mt-6 inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/70 px-6 py-3 text-sm font-semibold text-slate-700 backdrop-blur-sm transition-all hover:border-indigo-400 hover:text-indigo-600"
           >
